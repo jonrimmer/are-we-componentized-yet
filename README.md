@@ -1,2 +1,2 @@
-[Are we!?](http://jonrimmer.github.com/Are-We-Componentized-Yet/awcy.html)
+# [Are we!?](http://jonrimmer.github.com/are-we-componentized-yet/) #
 

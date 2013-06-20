@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+        <title>Are We Componentized Yet?</title>
+		<link href="//fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+		<link href="main.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<header>
+			<h1>Are We Componentized Yet?</h1>
+			<p class="subline">Tracking the progress of <a href="#wtf">Web Components</a> through standardisation, polyfillification<sup><a href="#fn1">1</a></sup>, and implementation.</p>
+		</header>
+
+		<div id="tableWrapper">
+			<table>
+				<thead>
+					<tr>
+						<th rowspan="2"></th>
+						<th colspan="2">Documentation</th>
+						<th colspan="6">Implementation</th>
+					</tr>
+					<tr>
+						<th>Explained</th>
+						<th>Specced</th>
+						<th>Polyfill</th>
+						<th>Code</th>
+						<th>Behind Flag</th>
+						<th>Dev/Beta</th>
+						<th>Released!</th>
+						<th>X-Browser</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Templates</th>
+						<td class="yes"><a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#template-section"></a></td>
+						<td class="yes"><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html"></a></td>
+						<td class="yes"><a href="#polyfills"></a></td>
+						<td class="yes"><a href="https://code.google.com/p/chromium/issues/detail?id=164794"></a></td>
+						<td class="yes"><a href="http://blog.chromium.org/2013/02/chrome-26-beta-template-element.html"></a></td>
+						<td class="yes"><a href="http://blog.chromium.org/2013/02/chrome-26-beta-template-element.html"></a></td>
+						<td class="yes"><a href="http://googlechromereleases.blogspot.co.uk/2013/03/stable-channel-update_26.html"></a></td>
+						<td class="kinda"><a href="http://caniuse.com/#feat=template"></a></td>
+					</tr>
+					<tr>
+						<th>HTML Imports</th>
+						<td class="kinda"><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#imports-section"></a></td>
+						<td class="kinda"><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/imports/index.html"></a></td>
+						<td class="yes"><a href="#polyfills"></a></td>
+						<td class="kinda"><a href="https://code.google.com/p/chromium/issues/detail?id=240592"></a></td>
+					</tr>
+					<tr>
+						<th>Custom Elements</th>
+						<td class="yes"><a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#custom-element-section"></a></td>
+						<td class="yes"><a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html"></a></td>
+						<td class="yes"><a href="#polyfills"></a></td>
+						<td class="kinda"><a href="https://code.google.com/p/chromium/issues/detail?id=234509"></a></td>
+					</tr>
+					<tr>
+						<th>Shadow DOM</th>
+						<td class="yes"><a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#shadow-dom-section"></a></td>
+						<td class="yes"><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html"></a></td>
+						<td class="yes"><a href="#polyfills"></a></td>
+						<td class="kinda"><a href="https://code.google.com/p/chromium/issues/list?can=2&q=label%3ACr-Blink-WebComponents+shadow"></a></td>
+						<td class="yes"><a href="https://plus.google.com/100132233764003563318/posts/9kNHQ32cvjg"></a></td>
+						<td class="yes"><a href="http://blog.chromium.org/2013/01/content-security-policy-and-shadow-dom.html"></a></td>
+						<td class="yes"><a href="http://googlechromereleases.blogspot.co.uk/2013/02/stable-channel-update_21.html"></a></td>
+					</tr>
+					<tr>
+						<th>Decorators</th>
+						<td class="yes"><a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#decorator-section"></a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<p class="key">
+			<b>Cells are clickable!</b> <span class="kinda-key">Yellow</span> means in-progress; <span class="yes-key">green</span> means mostly finished.
+		</p>
+
+		<div id="content">
+			<p>
+				Last Update: <strong>20th July, 2013</strong> — <i>I got prodded into updating this and making it a bit more SEO friendly. Figured I'd take the opportunity to give it a non-terrible design and expand the scope a little to cover all efforts to implement web components, not just Chrome's.</i>
+			</p>
+
+			<h2 id="wtf">Web Components!?</h2>
+
+			<p>What are web components? They are encapulsated, reusable and composable widgets for the web platform. If that sounds cool, then I urge you to check out one of the <a href="http://youtu.be/fqULJBBEVQE">very good introductions</a> to them that others have provided. I'll just say that in my opinion, they're the most exciting thing to happen to the web platform since HTML5. Why? Because they promise to turn the web into a truly flexible, extensible platform for building applications. Imagine the capabilities of libraries like Angular, Ember, and Backbone, but built right into the platform APIs, and standardised across all browsers. That’s the dream of Web Components, and while we’re not there yet, we're well on our way.</p>
+
+			<p>The purpose of this page is to track progress across the various documents where web components are being specified, the polyfills that provide a way to use them today, and their implementation in browsers that will make them a first class citizen of the web platform in the months and years to come.</p>
+
+			<h2>Specs!</h2>
+
+			<p>Web components are being specified at the W3C, with Dimtri Glazkov leading the charge, ably assisted by various other heroes. Spec documents have a reputation in some quarters as dense and unreadable, which is perhaps partly deserved. They do contain a lot of details that only browser engineers really need to worry about. But, modern specs also often contain very readable explainers and examples, and they're usually the most accurate and detailed source of information on how things really work.</p>
+
+			<ul class="specs">
+				<li>
+					<a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html">HTML Templates Editor's Draft</a> —
+					<a href="http://www.w3.org/TR/html-templates/">Working Draft</a>
+				</li>
+				<li>
+					<a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/imports/index.html">HTML Imports Editor's Draft</a> — No working draft
+				</li>
+				<li>
+					<a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html">Shadow DOM Editor's Draft</a> —
+					<a href="http://www.w3.org/TR/shadow-dom/">Working Draft</a>
+				</li>
+				<li>
+					<a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html">Custom Elements Editor's Draft</a> —
+					<a href="http://www.w3.org/TR/custom-elements/">Working Draft</a>
+				</li>
+			</ul>
+
+			<h2 id="polyfills">Polyfills!</h2>
+
+			<p>There are two polyfills of web components available. The first is <a href="http://www.x-tags.org/">X-Tags by Mozilla</a>, and the second is <a href="http://polymer-project.org">Polymer by Google</a>. Both are slightly different, and my impression is that Polymer is somewhat more expansive in the scope of the APIs it implements. Go nuts, try both!</p>
+
+			<h2 id="code">Code!</h2>
+
+			<p>Implementation of web components within browsers has begun, although the split of Blink from Webkit has muddied the waters slightly. This appears to be the status at present:</p>
+
+			<ul class="browsers">
+				<li class="chrome">
+					<p>
+						Chrome is the gold standard. Google has been leading to effort to spec and implement web components, and two of its features, shadow DOM and templates, are already shipping in Chrome's stable channel, while development is fast progressing on others.
+					</p>
+					<p>
+						The shift from Webkit's bugzilla to the Chromium tracker has made it a little more difficult to follow the implementation effort, as there aren't the meta bugs and trees I used to use to follow everything, but most of the relevant issues are linked in the table above.
+					</p>
+				</li>
+				<li class="firefox">
+					<p>
+						Mozilla haven't been slouching either, and have made good progress towards implementing various parts of web components in Firefox. They have <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=811542">a tracking bug here</a>, and various features are being implemented via its dependencies.
+					</p>
+				</li>
+				<li class="safari">
+					<p>
+						Although a number of web components features were implemented by Google within the Webkit codebase, they were never switched on in Safari. With the departure of the Chromium port, the Webkit maintainers have begun to remove features <a href="https://lists.webkit.org/pipermail/webkit-dev/2013-May/024894.html">such as shadow DOM</a> from the codebase. This is understandable from an engineering perspective, as unused code shouldn't be left lying around, but as a web developer it's disappointing to see.
+					</p>
+				</li>
+				<li class="ie">
+					<p>
+						Microsoft don't talk about their development plans publicly, so it's not clear if and when they will implement web components features, but there are positive signs: They co-edit the HTML Templates spec, and they have history providing an analogous feature in IE's old element behaviours<sup><a href="#fn2">2</a></sup>. Given their generally conservative approach nowadays, I think it's unlikely we'll see anything in IE11, but never say never.
+					</p>
+				</li>
+				<li class="opera">
+					<p>
+						As Opera have switched to base their browers on Chromium/Blink, I expect they will broadly follow Chrome in terms of implementation status.
+					</p>
+				</li>
+			</ul>
+
+			<h2>Who made this?</h2>
+
+			<p>I'm Jon Rimmer, a web developer who spends way too much of his free time reading blogs, W3C mailing lists and teleconference minutes to find out what's happening with the web platform. I don't work for a browser vendor or standards group, but I've been a fan of the web components technology since I first heard of it, and this is my way of helping me and others keep track of its development. <a href="http://blog.brillskills.com">I have a blog</a>, where I ramble unceasingly.</p>
+
+			<p>If you spot anything that's inaccurate, outdated, or could just be improved, please let me know <a href="https://github.com/JonRimmer/Are-We-Componentized-Yet">via Github</a>.</p>
+
+		</div>
+
+		<footer>
+			<ol class="footnotes">
+				<li id="fn1">It's a perfectly cromulent word.</li>
+				<li id="fn2">While element behaviours were less fully featured than web components, it's tempting to wonder what would have happened if Mozilla and others had reverse engineered, specced implemented them a decade ago, as happened with XHR.</li>
+			</ol>
+		</footer>
+	</body>
+</html>
