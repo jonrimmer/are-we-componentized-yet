@@ -1,2 +1,1 @@
-# [Are we!?](http://jonrimmer.github.com/are-we-componentized-yet/) #
-
+## [Are we!?](http://jonrimmer.github.io/are-we-componentized-yet/) ##
