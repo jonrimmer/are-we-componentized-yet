@@ -17,8 +17,12 @@ b, strong {
 	padding: 0 18px;
 }
 
-body > div p {
+body > div p, blockquote {
 	line-height: 1.8em;
+}
+
+blockquote {
+	font-style: italic;
 }
 
 a {
