@@ -61,8 +61,12 @@ table {
 	display: inline-table;
 	border-spacing: 0;
 	width: 100%;
-	max-width: 1500px;
+	max-width: 1200px;
 	color: #CCC;
+}
+
+thead tr:nth-child(2) th {
+	width: 10%;
 }
 
 td, th {
@@ -70,8 +74,8 @@ td, th {
 }
 
 td {
-	width: 10%;
 	position: relative;
+	width: 10%;
 }
 
 th {
@@ -83,13 +87,29 @@ th {
 tbody th {
 	text-align: left;
 	padding: 0 12px;
+	width: 15%;
 }
 
 td a {
 	display: block;
 	width: 100%;
 	height: 60px;
+	line-height: 60px;
 	-webkit-transition: all 2s;
+	color: black;
+}
+
+td a:hover {
+	text-decoration: none;
+}
+
+.wait-and-see {
+	opacity: 0.5;
+	transition: all 0.3s ease;
+}
+
+.wait-and-see:hover {
+	opacity: 1;
 }
 
 .yes {
@@ -189,8 +209,8 @@ ul.browsers li {
 	tbody th {
 		margin-top: 24px;
 		text-align: center;
-		width: 99%;
 		padding: 12px 0;
+		width: 100%;
 	}
 
 	tbody tr:first-child th {
@@ -198,12 +218,16 @@ ul.browsers li {
 	}
 
 	td {
-		width: 99%;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		width: 100%;
 		min-height: 50px;
-		padding: 0;
+		padding: 0 0 0 30%;
 	}
 
 	td::before {
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -217,9 +241,8 @@ ul.browsers li {
 	td:nth-child(2)::before { content: 'Explained'; }
 	td:nth-child(3)::before { content: 'Specced'; }
 	td:nth-child(4)::before { content: 'Polyfill'; }
-	td:nth-child(5)::before { content: 'Code'; }
-	td:nth-child(6)::before { content: 'Behind Flag'; }
-	td:nth-child(7)::before { content: 'Dev/Beta'; }
-	td:nth-child(8)::before { content: 'Released!'; }
-	td:nth-child(9)::before { content: 'X-Browser'; }
+	td:nth-child(5)::before { content: 'Chrome / Opera'; }
+	td:nth-child(6)::before { content: 'Firefox'; }
+	td:nth-child(7)::before { content: 'Safari'; }
+	td:nth-child(8)::before { content: 'IE'; }
 } 

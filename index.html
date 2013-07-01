@@ -27,11 +27,10 @@
 						<th>Explained</th>
 						<th>Specced</th>
 						<th>Polyfill</th>
-						<th>Code</th>
-						<th>Behind Flag</th>
-						<th>Dev/Beta</th>
-						<th>Released!</th>
-						<th>X-Browser</th>
+						<th>Chrome / Opera</th>
+						<th>Firefox</th>
+						<th>Safari</th>
+						<th>IE</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -40,38 +39,35 @@
 						<td class="yes"><a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#template-section"></a></td>
 						<td class="yes"><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html"></a></td>
 						<td class="yes"><a href="#polyfills"></a></td>
-						<td class="yes"><a href="https://code.google.com/p/chromium/issues/detail?id=164794"></a></td>
-						<td class="yes"><a href="http://blog.chromium.org/2013/02/chrome-26-beta-template-element.html"></a></td>
-						<td class="yes"><a href="http://blog.chromium.org/2013/02/chrome-26-beta-template-element.html"></a></td>
-						<td class="yes"><a href="http://googlechromereleases.blogspot.co.uk/2013/03/stable-channel-update_26.html"></a></td>
-						<td class="kinda"><a href="http://caniuse.com/#feat=template"></a></td>
+						<td class="yes"><a href="http://caniuse.com/#feat=template">Stable</a></td>
+						<td class="yes"><a href="http://caniuse.com/#feat=template">Stable</a></td>
 					</tr>
 					<tr>
 						<th>HTML Imports</th>
 						<td class="kinda"><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#imports-section"></a></td>
 						<td class="yes"><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/imports/index.html"></a></td>
 						<td class="yes"><a href="#polyfills"></a></td>
-						<td class="kinda"><a href="https://code.google.com/p/chromium/issues/detail?id=240592"></a></td>
+						<td class="kinda"><a href="https://code.google.com/p/chromium/issues/detail?id=240592">Bug</a></td>
+						<td class="kinda"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=877072">Bug</a></td>
 					</tr>
 					<tr>
 						<th>Custom Elements</th>
 						<td class="yes"><a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#custom-element-section"></a></td>
 						<td class="yes"><a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html"></a></td>
 						<td class="yes"><a href="#polyfills"></a></td>
-						<td class="kinda"><a href="https://code.google.com/p/chromium/issues/detail?id=234509"></a></td>
+						<td class="kinda"><a href="https://code.google.com/p/chromium/issues/detail?id=234509">Bug</a></td>
+						<td class="kinda"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=811542">Bug</a></td>
 					</tr>
 					<tr>
 						<th>Shadow DOM</th>
 						<td class="yes"><a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#shadow-dom-section"></a></td>
 						<td class="yes"><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html"></a></td>
 						<td class="yes"><a href="#polyfills"></a></td>
-						<td class="kinda"><a href="https://code.google.com/p/chromium/issues/list?can=2&q=label%3ACr-Blink-WebComponents+shadow"></a></td>
-						<td class="yes"><a href="https://plus.google.com/100132233764003563318/posts/9kNHQ32cvjg"></a></td>
-						<td class="yes"><a href="http://blog.chromium.org/2013/01/content-security-policy-and-shadow-dom.html"></a></td>
-						<td class="yes"><a href="http://googlechromereleases.blogspot.co.uk/2013/02/stable-channel-update_21.html"></a></td>
+						<td class="yes"><a href="http://caniuse.com/#feat=shadowdom">Stable</a></td>
+						<td class="kinda"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=806506">Bug</a></td>
 					</tr>
-					<tr>
-						<th>Decorators</th>
+					<tr class="wait-and-see">
+						<th>Decorators<a href="#fnDecorators"><sup>3</sup></a></th>
 						<td class="yes"><a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#decorator-section"></a></td>
 					</tr>
 				</tbody>
@@ -83,7 +79,7 @@
 
 		<div id="content">
 			<p>
-				Last Update: <strong>20th June, 2013</strong> — <i>I got prodded into updating this and making it a bit more SEO friendly. Figured I'd take the opportunity to give it a non-terrible design and expand the scope a little to cover all efforts to implement web components, not just Chrome's.</i>
+				Last Update: <strong>1st July, 2013</strong> — <i>Trying a slightly different approach for the table, with a column for each browser and status info in the cells.</i>
 			</p>
 
 			<h2 id="wtf">Web Components!?</h2>
@@ -143,7 +139,7 @@
 				</li>
 				<li class="ie">
 					<p>
-						Microsoft don't talk about their development plans publicly, so it's not clear if and when they will implement web components features, but there are positive signs: They co-edit the HTML Templates spec, and they have history providing an analogous feature in IE's old element behaviours<sup><a href="#fn2">2</a></sup>. Given their generally conservative approach nowadays, I think it's unlikely we'll see anything in IE11, but never say never.
+						Microsoft don't talk about their development plans publicly, so it's not clear if and when they will implement web components features, but there are positive signs: They co-edit the HTML Templates spec, and they have history providing an analogous feature in IE's old element behaviours<sup><a href="#fn2">2</a></sup>. The recently released <a href="http://generatedcontent.org/post/53943518693/ie11preview1">preview of IE11</a> doesn't seem to contain any of the web components APIs, but it does contain support for ancillary features such as Mutation Observers and Pointer Events that are useful for building components and polyfills. 
 					</p>
 				</li>
 				<li class="opera">
@@ -165,6 +161,7 @@
 			<ol class="footnotes">
 				<li id="fn1">It's a perfectly cromulent word.</li>
 				<li id="fn2">While element behaviours were less fully featured than web components, it's tempting to wonder what would have happened if Mozilla and others had reverse engineered, specced implemented them a decade ago, as happened with XHR.</li>
+				<li id="fnDecorators">Decorators haven't progressed much beyond an interesting idea at this point. It <a href="https://twitter.com/dglazkov/status/350999681330982913">remains to be seen</a> whether they will eventually progress to standardisation and implementation.</li>
 			</ol>
 		</footer>
 	</body>
