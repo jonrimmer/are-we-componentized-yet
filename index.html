@@ -36,39 +36,39 @@
 				<tbody>
 					<tr>
 						<th>Templates</th>
-						<td class="yes"><a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#template-section"></a></td>
-						<td class="yes"><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html"></a></td>
+						<td class="yes"><a href="http://w3c.github.io/webcomponents/explainer/#template-section"></a></td>
+						<td class="yes"><a href="http://w3c.github.io/webcomponents/spec/templates/"></a></td>
 						<td class="yes"><a href="#polyfills"></a></td>
-						<td class="yes"><a href="http://caniuse.com/#feat=template">Stable</a></td>
+						<td class="yes"><a href="http://www.chromestatus.com/features/5207287069147136">Stable</a></td>
 						<td class="yes"><a href="http://caniuse.com/#feat=template">Stable</a></td>
 					</tr>
 					<tr>
 						<th>HTML Imports</th>
-						<td class="kinda"><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#imports-section"></a></td>
-						<td class="yes"><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/imports/index.html"></a></td>
+						<td class="kinda"><a href="http://w3c.github.io/webcomponents/explainer/#imports-section"></a></td>
+						<td class="yes"><a href="http://w3c.github.io/webcomponents/spec/imports/"></a></td>
 						<td class="yes"><a href="#polyfills"></a></td>
-						<td class="kinda"><a href="https://code.google.com/p/chromium/issues/detail?id=240592">Bug</a></td>
+						<td class="kinda"><a href="http://www.chromestatus.com/features/5144752345317376">Flag</a></td>
 						<td class="kinda"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=877072">Bug</a></td>
 					</tr>
 					<tr>
 						<th>Custom Elements</th>
-						<td class="yes"><a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#custom-element-section"></a></td>
-						<td class="yes"><a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html"></a></td>
+						<td class="yes"><a href="http://w3c.github.io/webcomponents/explainer/#custom-element-section"></a></td>
+						<td class="yes"><a href="http://w3c.github.io/webcomponents/spec/custom/"></a></td>
 						<td class="yes"><a href="#polyfills"></a></td>
-						<td class="kinda"><a href="https://code.google.com/p/chromium/issues/detail?id=234509">Bug</a></td>
+						<td class="kinda"><a href="http://www.chromestatus.com/features/4642138092470272">Flag</a></td>
 						<td class="kinda"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=811542">Bug</a></td>
 					</tr>
 					<tr>
 						<th>Shadow DOM</th>
-						<td class="yes"><a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#shadow-dom-section"></a></td>
-						<td class="yes"><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html"></a></td>
+						<td class="yes"><a href="http://w3c.github.io/webcomponents/explainer/#shadow-dom-section"></a></td>
+						<td class="yes"><a href="http://w3c.github.io/webcomponents/spec/shadow/"></a></td>
 						<td class="yes"><a href="#polyfills"></a></td>
-						<td class="yes"><a href="http://caniuse.com/#feat=shadowdom">Stable</a></td>
+						<td class="yes"><a href="http://www.chromestatus.com/features/5479141319114752">Stable</a></td>
 						<td class="kinda"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=806506">Bug</a></td>
 					</tr>
 					<tr class="wait-and-see">
 						<th>Decorators<a href="#fnDecorators"><sup>3</sup></a></th>
-						<td class="yes"><a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#decorator-section"></a></td>
+						<td class="yes"><a href="http://w3c.github.io/webcomponents/explainer/#decorator-section"></a></td>
 					</tr>
 				</tbody>
 			</table>
@@ -79,7 +79,7 @@
 
 		<div id="content">
 			<p>
-				Last Update: <strong>1st July, 2013</strong> — <i>Trying a slightly different approach for the table, with a column for each browser and status info in the cells.</i>
+				Last Update: <strong>11th November, 2013</strong> — <i>Changed spec links to GitHub hosted versions, and Chrome implementation cells to <a href="http://chromestatus.com">chromestatus.com</a>.</i>
 			</p>
 
 			<h2 id="wtf">Web Components!?</h2>
@@ -87,6 +87,8 @@
 			<p>What are web components? They are encapsulated, reusable and composable widgets for the web platform. If that sounds cool, then I urge you to check out one of the <a href="http://youtu.be/fqULJBBEVQE">very good introductions</a> to them that others have provided. In my opinion, they're the most exciting thing to happen in web development since HTML5. Why? Because they promise to put the power and extensibility necessary to build sophisticated widgets and applications right into core web feature set. Imagine the capabilities of libraries like Angular, Ember, and Backbone, but as a foundation of the platform, standardised across all browsers.
 
 			<p>The purpose of this page is to track progress across the various documents where web components are being specified, the polyfills that let you use them today, and their implementation in browsers that will make them a first class citizen of the web in the months and years to come.</p>
+			
+			<p>For lots more information about Web Components, including discussions, developer docs, best practices, and available components, check out <a href="http://webcomponentsorg.github.io/webcomponents.org/">webcomponentsorg.github.io</a></p>
 
 			<h2>Specs!</h2>
 
@@ -94,18 +96,19 @@
 
 			<ul class="specs">
 				<li>
-					<a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html">HTML Templates Editor's Draft</a> —
+					<a href="http://w3c.github.io/webcomponents/spec/templates/">HTML Templates Editor's Draft</a> —
 					<a href="http://www.w3.org/TR/html-templates/">Working Draft</a>
 				</li>
 				<li>
-					<a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/imports/index.html">HTML Imports Editor's Draft</a> — <a href="http://www.w3.org/TR/html-imports/">Working Draft</a>
+					<a href="http://w3c.github.io/webcomponents/spec/imports/">HTML Imports Editor's Draft</a> — 
+					<a href="http://www.w3.org/TR/html-imports/">Working Draft</a>
 				</li>
 				<li>
-					<a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html">Shadow DOM Editor's Draft</a> —
+					<a href="http://w3c.github.io/webcomponents/spec/shadow/">Shadow DOM Editor's Draft</a> —
 					<a href="http://www.w3.org/TR/shadow-dom/">Working Draft</a>
 				</li>
 				<li>
-					<a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html">Custom Elements Editor's Draft</a> —
+					<a href="http://w3c.github.io/webcomponents/spec/custom/">Custom Elements Editor's Draft</a> —
 					<a href="http://www.w3.org/TR/custom-elements/">Working Draft</a>
 				</li>
 			</ul>
@@ -147,7 +150,7 @@
 				</li>
 				<li class="ie">
 					<p>
-						Microsoft don't talk about their development plans publicly, so it's not clear if and when they will implement web components features, but there are positive signs: They co-edit the HTML Templates spec, and they have history providing an analogous feature in IE's old element behaviours<sup><a href="#fn2">2</a></sup>. The recently released <a href="http://generatedcontent.org/post/53943518693/ie11preview1">preview of IE11</a> doesn't seem to contain any of the web components APIs, but it does contain support for ancillary features such as Mutation Observers and Pointer Events that are useful for building components and polyfills. 
+						Microsoft don't talk about their development plans publicly, so it's not clear if and when they will implement web components features, but there are positive signs: They co-edit the HTML Templates spec, and they have history providing an analogous feature in IE's old element behaviours<sup><a href="#fn2">2</a></sup>. The recently released IE11 doesn't seem to contain any of the web components APIs, but it does contain support for ancillary features such as Mutation Observers and Pointer Events that are useful for building components and polyfills. 
 					</p>
 				</li>
 				<li class="opera">
