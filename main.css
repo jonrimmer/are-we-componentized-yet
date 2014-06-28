@@ -117,9 +117,9 @@ td a:hover {
 }
 
 .yes {
-	background: #5AE100;
-	background: -webkit-linear-gradient(#5AE100, #35AF01);
-	background: linear-gradient(#5AE100, #35AF01);
+	background: #20c100;
+	background: -webkit-linear-gradient(#20c100, #289e01);
+	background: linear-gradient(#20c100, #289e01);
 }
 
 .yes:hover {
@@ -129,14 +129,14 @@ td a:hover {
 }
 
 .yes-key {
-	color: #35AF01;
+	color: #289e01;
 	font-weight: 600;
 }
 
 .kinda {
-	background: #FFCC00;
-	background: -webkit-linear-gradient(#FFCC00, #FD8602);
-	background: linear-gradient(#FFCC00, #FD8602);
+	background: #FFFF00;
+	background: -webkit-linear-gradient(#FFFF00, #FFC802);
+	background: linear-gradient(#FFFF00, #FFC802);
 }
 
 .kinda:hover {
