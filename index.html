@@ -20,12 +20,10 @@
 				<thead>
 					<tr>
 						<th rowspan="2"></th>
-						<th colspan="2">Documentation</th>
-						<th colspan="6">Implementation</th>
+						<th rowspan="2">Specced</th>
+						<th colspan="5">Implementation</th>
 					</tr>
 					<tr>
-						<th>Explained</th>
-						<th>Specced</th>
 						<th>Polyfill</th>
 						<th>Chrome / Opera</th>
 						<th>Firefox</th>
@@ -36,8 +34,7 @@
 				<tbody>
 					<tr>
 						<th>Templates</th>
-						<td class="yes"><a href="http://w3c.github.io/webcomponents/explainer/#template-section"></a></td>
-						<td class="yes"><a href="http://w3c.github.io/webcomponents/spec/templates/"></a></td>
+						<td class="yes"><a href="https://html.spec.whatwg.org/multipage/scripting.html#the-template-element"></a></td>
 						<td class="yes"><a href="#polyfills"></a></td>
 						<td class="yes"><a href="http://www.chromestatus.com/features/5207287069147136">Stable</a></td>
 						<td class="yes"><a href="http://caniuse.com/#feat=template">Stable</a></td>
@@ -45,7 +42,6 @@
 					</tr>
 					<tr>
 						<th>HTML Imports</th>
-						<td class="kinda"><a href="http://w3c.github.io/webcomponents/explainer/#imports-section"></a></td>
 						<td class="yes"><a href="http://w3c.github.io/webcomponents/spec/imports/"></a></td>
 						<td class="yes"><a href="#polyfills"></a></td>
 						<td class="yes"><a href="http://www.chromestatus.com/features/5144752345317376">Stable</a></td>
@@ -53,7 +49,6 @@
 					</tr>
 					<tr>
 						<th>Custom Elements</th>
-						<td class="yes"><a href="http://w3c.github.io/webcomponents/explainer/#custom-element-section"></a></td>
 						<td class="yes"><a href="http://w3c.github.io/webcomponents/spec/custom/"></a></td>
 						<td class="yes"><a href="#polyfills"></a></td>
 						<td class="yes"><a href="http://www.chromestatus.com/features/4642138092470272">Stable</a></td>
@@ -61,7 +56,6 @@
 					</tr>
 					<tr>
 						<th>Shadow DOM</th>
-						<td class="yes"><a href="http://w3c.github.io/webcomponents/explainer/#shadow-dom-section"></a></td>
 						<td class="yes"><a href="http://w3c.github.io/webcomponents/spec/shadow/"></a></td>
 						<td class="yes"><a href="#polyfills"></a></td>
 						<td class="yes"><a href="http://www.chromestatus.com/features/4507242028072960">Stable</a></td>
@@ -76,7 +70,7 @@
 
 		<div id="content">
 			<p>
-				<i>Last Update: <strong>13th August, 2014</strong> — Update all browsers' status.</i>
+				<i>Last Update: <strong>19th September, 2014</strong> — Added Bosonic library, removed 'Explained' column, and fixed spec links.</i>
 			</p>
 
 			<h2 id="wtf">Web Components!?</h2>
@@ -112,15 +106,30 @@
 
 			<h2 id="polyfills">Polyfills!</h2>
 
-			<p>There are two polyfills of web components available. The first is <a href="http://www.x-tags.org/">X-Tags by Mozilla</a>, and the second is <a href="http://polymer-project.org">Polymer by Google</a>.
+			<p>There are three polyfills of web components available:</p>
+			
+			<h3><a href="http://x-tags.org/">X-Tags by Mozilla</a></h3>
 
-			<p>Both libraries share a core set of polyfills for the main features of web components, such as custom elements and templates, but each builds upon it in a slightly different way. To quote the <a href="http://www.x-tags.org/blog">official X-Tag blog</a>:</p>
+			<blockquote>
+				"X-Tag allows you to easily create elements to encapsulate common behavior or use existing custom elements to quickly get the behavior you're looking for. For example, check out Brick, which contains 14 custom elements optimized for Web Applications."
+			</blockquote>
+
+			<h3><a href="http://polymer-project.org">Polymer by Google</a></h3>
+
+			<blockquote>
+				"Web Components usher in a new era of web development based on encapsulated and interoperable custom elements that extend HTML itself. Built atop these new standards, Polymer makes it easier and faster to create anything from a button to a complete application across desktop, mobile, and beyond."
+			</blockquote>
+			<h3><a href="http://bosonic.github.io/">Bosonic</a></h3>
+
+			<blockquote>
+				"We loved the Introduction to Web Components spec. What we wanted was a way to build components as this spec describes, shielding ourselves against potential spec changes, and supporting not-so-modern browsers like IE9. And so Bosonic was born!"
+			</blockquote>
+
+			<p>All three libraries share and collaborate upon some libraries that polyfill the main features of web components, such as custom elements and templates, but each builds on them in a unique way. To quote the <a href="http://www.x-tags.org/blog">official X-Tag blog</a>:</p>
 
 			<blockquote>
 				"X-Tag and Polymer are both high-level sugar libraries that build upon the W3 Web Components specs - each introduces a different approach to making development of web components an even more amazing experience. To help make this more relatable, consider the following: jQuery : DOM :: X-Tag/Polymer : Web Components."
 			</blockquote>
-
-			<p>Mozilla and Google are collaborating on building the shared polyfills that underpin the libraries. This should allow each organisation to explore different features and approaches, while retaining a core of compatibility. Now is the time for developers to experiment with both these libraries and provide feedback on what works and what doesn't, so it can be incorporated back into the specs and help to make web components even better!</p>
 
 			<h2 id="code">Code!</h2>
 
