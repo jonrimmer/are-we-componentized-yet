@@ -133,6 +133,18 @@ td a:hover {
 	font-weight: 600;
 }
 
+.vote {
+	background: rgb(60, 209, 253);
+	background: -webkit-linear-gradient(rgb(60, 209, 253), rgb(35, 140, 195));
+	background: linear-gradient(rgb(60, 209, 253), rgb(35, 140, 195));
+}
+
+.vote:hover {
+	background: rgb(65, 168, 223);
+	background: -webkit-linear-gradient(rgb(145, 230, 255), rgb(65, 168, 223));
+	background: linear-gradient(rgb(145, 230, 255), rgb(65, 168, 223));
+}
+
 .kinda {
 	background: #FFFF00;
 	background: -webkit-linear-gradient(#FFFF00, #FFC802);
