@@ -181,9 +181,9 @@ ul.browsers li {
 
 .chrome { background: url('img/chrome.png') no-repeat top left; }
 .opera { background: url('img/opera.png') no-repeat top left; }
-.ie { background: url('img/ie.png') no-repeat top left; }
 .firefox { background: url('img/firefox.png') no-repeat top left; }
 .safari { background: url('img/safari.png') no-repeat top left; }
+.edge { background: url('img/edge.png') no-repeat top left; }
 
 .specs li, .footnotes li {
 	margin-bottom: 1em;
