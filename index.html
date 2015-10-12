@@ -65,7 +65,7 @@
 						<td class="yes"><a href="#polyfills"></a></td>
 						<td class="yes"><a href="http://www.chromestatus.com/features/4507242028072960">Stable</a></td>
 						<td class="yes"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=806506">Flag</a></td>
-						<td></td>
+						<td class="kinda"><a href="https://bugs.webkit.org/show_bug.cgi?id=148695">WebKit Nightly</a></td>
 						<td class="vote"><a href="https://wpdev.uservoice.com/forums/257854-internet-explorer-platform/suggestions/6263785-shadow-dom-unprefixed">Vote</a></td>
 					</tr>
 				</tbody>
@@ -77,7 +77,7 @@
 
 		<div id="content">
 			<p>
-				<i>Last Update: <strong>July 2015</strong> — IE to Edge, and Templates are in progress.</i>
+				<i>Last Update: <strong>October 2015</strong> — Shadow DOM is being implemented in WebKit!</i>
 			</p>
 
 			<h2 id="wtf">Web Components!?</h2>
@@ -85,7 +85,7 @@
 			<p>What are web components? They are encapsulated, reusable and composable widgets for the web platform. If that sounds cool, then I urge you to check out one of the <a href="http://youtu.be/fqULJBBEVQE">very good introductions</a> to them that others have provided. In my opinion, they're the most exciting thing to happen in web development since HTML5. Why? Because they promise to put the power and extensibility necessary to build sophisticated widgets and applications right into core web feature set. Imagine the capabilities of libraries like Angular, Ember, and Backbone, but as a foundation of the platform, standardised across all browsers.
 
 			<p>The purpose of this page is to track progress across the various documents where web components are being specified, the polyfills that let you use them today, and their implementation in browsers that will make them a first class citizen of the web in the months and years to come.</p>
-			
+
 			<p>For lots more information about Web Components, including discussions, developer docs, and best practices, check out <a href="http://webcomponents.org/">webcomponents.org</a>. For available components made by the community, check out <a href="http://customelements.io/">customelements.io</a></p>
 
 			<h2>Specs!</h2>
@@ -97,7 +97,7 @@
 					<a href="https://html.spec.whatwg.org/multipage/scripting.html#the-template-element">HTML Templates in the HTML Living Standard</a>
 				</li>
 				<li>
-					<a href="http://w3c.github.io/webcomponents/spec/imports/">HTML Imports Editor's Draft</a> — 
+					<a href="http://w3c.github.io/webcomponents/spec/imports/">HTML Imports Editor's Draft</a> —
 					<a href="http://www.w3.org/TR/html-imports/">Working Draft</a>
 				</li>
 				<li>
@@ -109,11 +109,11 @@
 					<a href="http://www.w3.org/TR/custom-elements/">Working Draft</a>
 				</li>
 			</ul>
-			
+
 			<h2 id="libraries">Libraries!</h2>
 
 			<p>There are three major libraries for working with and extending web components:</p>
-			
+
 			<h3><a href="http://x-tags.org/">X-Tags by Mozilla</a></h3>
 
 			<blockquote>
@@ -130,11 +130,11 @@
 			<blockquote>
 				"We loved the Introduction to Web Components spec. What we wanted was a way to build components as this spec describes, shielding ourselves against potential spec changes, and supporting not-so-modern browsers like IE9. And so Bosonic was born!"
 			</blockquote>
-			
+
 			<h2 id="polyfills">Polyfills!</h2>
-			
+
 			<p>A set of polyfills for webcomponents and other advanced parts of DOM and JS is now available at <a href="http://webcomponents.org/polyfills/">webcomponents.org</a>.</p>
-			
+
 			<p>All three libraries share and collaborate upon these polyfills, but each builds on them in a unique way. To quote the <a href="http://www.x-tags.org/blog">official X-Tag blog</a>:</p>
 
 			<blockquote>
@@ -161,7 +161,11 @@
 				</li>
 				<li class="safari">
 					<p>
-						Although a number of web components features were implemented by Google within the WebKit codebase, they were never switched on in Safari. With the departure of the Chromium port, the WebKit maintainers have begun to remove features <a href="https://lists.webkit.org/pipermail/webkit-dev/2013-May/024894.html">such as shadow DOM</a> from the codebase. This is understandable from an engineering perspective, as unused code shouldn't be left lying around, but as a web developer it's disappointing to see.
+						The &lt;template&gt; element was added in Safari 8, but while WebKit engineers expressed a positive attitude
+						to Web Components in theory, they had concerns about various aspects of their design. These were raised in the
+						appropriate standards groups, where occasionally fractious technical debates ensued. Eventually, solutions were
+						found, compromises were reached, and the WebKit team has recently begun working on an implementation of the
+						Shadow DOM standard.
 					</p>
 				</li>
 				<li class="edge">
