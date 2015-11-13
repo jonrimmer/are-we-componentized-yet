@@ -259,5 +259,5 @@ ul.browsers li {
 	td:nth-child(4)::before { content: 'Chrome / Opera'; }
 	td:nth-child(5)::before { content: 'Firefox'; }
 	td:nth-child(6)::before { content: 'Safari'; }
-	td:nth-child(7)::before { content: 'IE'; }
+	td:nth-child(7)::before { content: 'Edge'; }
 }
