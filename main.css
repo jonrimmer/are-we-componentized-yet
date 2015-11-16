@@ -80,6 +80,7 @@ td, th {
 td {
 	position: relative;
 	width: 10%;
+	height: 70px;
 }
 
 th {
@@ -97,8 +98,6 @@ tbody th {
 td a {
 	display: block;
 	width: 100%;
-	height: 60px;
-	line-height: 60px;
 	-webkit-transition: all 2s;
 	color: black;
 }
@@ -237,8 +236,8 @@ ul.browsers li {
 		box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		width: 100%;
-		min-height: 50px;
-		padding: 0 0 0 30%;
+		height: 60px;
+		padding: 16px 0 0 30%;
 	}
 
 	td::before {
